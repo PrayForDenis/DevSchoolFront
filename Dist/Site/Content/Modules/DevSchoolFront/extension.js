@@ -150,13 +150,12 @@ define(['tslib', '@docsvision/webclient/Helpers/MessageBox/MessageBox', '@docsvi
                 if (isSavingByNumerator) {
                     if (!nameControl.hasValue()) {
                         MessageBox.MessageBox.ShowWarning("Поле \"Название\" не заполнено!");
-                        isSavingByNumerator = false;
                         args.cancel();
                     }
                     else {
-                        isSavingByNumerator = false;
                         args.accept();
                     }
+                    isSavingByNumerator = false;
                 }
                 else {
                     if (!nameControl.hasValue() || !numeratorControl.hasValue()) {
