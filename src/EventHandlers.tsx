@@ -73,13 +73,12 @@ export async function card_saving(sender: SavingButtons, args: CancelableEventAr
     if (isSavingByNumerator) {
         if (!nameControl.hasValue()) {
             MessageBox.ShowWarning("Поле \"Название\" не заполнено!");
-            isSavingByNumerator = false;
             args.cancel();
         }
         else {
-            isSavingByNumerator = false;
             args.accept();
         }
+        isSavingByNumerator = false;
     }
     else {
         if (!nameControl.hasValue() || !numeratorControl.hasValue()) {
